@@ -18,7 +18,7 @@
 // })
 //跟数据库链接
 var mongoose = require('mongoose');
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;//垃圾过期文件不上传
 mongoose.connect('mongodb://localhost:27017/express-api');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
